@@ -17,7 +17,6 @@ import com.pov.dtos.TypeDto;
 import com.pov.service.interfaces.ITypeService;
 @RestController
 @RequestMapping("/api/v1/")
-@CrossOrigin(origins = "*")
 public class TypeController {
 	@Autowired
 	private ITypeService typeService;

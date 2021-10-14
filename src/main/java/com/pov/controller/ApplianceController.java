@@ -18,7 +18,6 @@ import com.pov.service.interfaces.IApplianceService;
 
 @RestController
 @RequestMapping("/api/v1/")
-@CrossOrigin(origins = "*")
 public class ApplianceController {
 	
 	@Autowired

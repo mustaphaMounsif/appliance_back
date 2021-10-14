@@ -18,7 +18,6 @@ import com.pov.service.interfaces.ITypePrestationService;
 
 @RestController
 @RequestMapping("/api/v1/")
-@CrossOrigin(origins = "*")
 public class TypePrestationController {
 	@Autowired
 	private ITypePrestationService prestationService;

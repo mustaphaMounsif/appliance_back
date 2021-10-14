@@ -18,7 +18,6 @@ import com.pov.service.interfaces.IClientService;
 
 @RestController
 @RequestMapping("/api/v1/")
-@CrossOrigin(origins = "*")
 public class ClientController {
 	@Autowired
 	private IClientService clientService;

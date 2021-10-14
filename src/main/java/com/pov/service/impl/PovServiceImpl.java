@@ -34,12 +34,7 @@ public class PovServiceImpl  implements IPovService{
 		return listPovDtos;
 	}
 
-	@Override
-	public PovDto onePov(Long id) {
-		Pov pov=povRepository.getById(id);
-		PovDto povDto=povMapper.toDto(pov, new PovDto());
-		return povDto;
-	}
+	
 
 	@Override
 	public boolean addPov(PovDto povDto) {
@@ -78,6 +73,29 @@ public class PovServiceImpl  implements IPovService{
 			listDto.add(povMapper.toDto(pov, new PovDto()));
 		} 
 		return listDto;
+	}
+	
+	@Override
+	public PovDto onePov(Long id) {
+		Pov pov=povRepository.getById(id);
+		PovDto povDto=povMapper.toDto(pov, new PovDto());
+		return povDto;
+	}
+	
+
+	@Override
+	public PovDto getInfoPovEncours(Long id) {
+		Pov pov=povRepository.getById(id);
+		PovDto povDto=new PovDto();
+		povDto.setId_pov(pov.getId_pov());
+		povDto.setDateDebut(pov.getDateDebut());
+		povDto.setDateFin(pov.getDateFin());
+		if(pov.getSceances() != null)
+			povDto.setNbrSeance(pov.getSceances().size());
+		else {
+			povDto.setNbrSeance(0);
+		}
+		return povDto;
 	}
 
 }

@@ -17,7 +17,6 @@ import com.pov.dtos.ContactDto;
 import com.pov.service.interfaces.IContactService;
 @RestController
 @RequestMapping("/api/v1/")
-@CrossOrigin(origins = "http://localhost:4200")
 public class ContactController {
 	@Autowired
 	private IContactService contactService;

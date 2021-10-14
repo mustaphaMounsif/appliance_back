@@ -12,13 +12,37 @@ public class PovDto {
 	private Date dateDebut;
 	private Date dateFin;
 	private String compteManager;
+	private Boolean status;
+	
 	private Long id_appliance;
 	private String libelleApplliance;
 	private Long id_client;
 	private String libelleClient;
 	private Long id_employe;
+	private int nbrSeance;
+	private Boolean offerCommercial;
 	
 	
+	
+	
+	public Boolean getOfferCommercial() {
+		return offerCommercial;
+	}
+	public void setOfferCommercial(Boolean offerCommercial) {
+		this.offerCommercial = offerCommercial;
+	}
+	public int getNbrSeance() {
+		return nbrSeance;
+	}
+	public void setNbrSeance(int nbrSeance) {
+		this.nbrSeance = nbrSeance;
+	}
+	public Boolean getStatus() {
+		return status;
+	}
+	public void setStatus(Boolean status) {
+		this.status = status;
+	}
 	public String getLibelleApplliance() {
 		return libelleApplliance;
 	}

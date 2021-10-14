@@ -12,4 +12,5 @@ public interface IPovService {
 	public boolean editPov(PovDto povDto);
 	public void deletePov(Long id);
 	public List<PovDto> detailPovAppliance(Long idAppliance);
+	public PovDto getInfoPovEncours(Long id);
 }

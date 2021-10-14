@@ -17,7 +17,6 @@ import com.pov.dtos.PovDto;
 import com.pov.service.interfaces.IPovService;
 
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("/api/v1/")
 public class PovController {
 	@Autowired
@@ -52,6 +51,10 @@ public class PovController {
 	@GetMapping("/povs/detail/{id}")
 	public List<PovDto> detailPovAppliance(@PathVariable("id") Long idAppliance){
 		return povService.detailPovAppliance(idAppliance);
+	}
+	@GetMapping("/povs/info/{id}")
+	public PovDto getInfoPovEncours(@PathVariable Long id) {
+		return povService.getInfoPovEncours(id);
 	}
 	
 	

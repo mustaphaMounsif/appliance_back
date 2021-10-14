@@ -28,6 +28,7 @@ public class Pov {
 	private Date dateFin;
 	private String compteManager;
 	
+	
 	@ManyToOne(fetch =  FetchType.EAGER)
 	@JoinColumn(name = "appliance_id_pov")
 	private Appliance appliance;
@@ -41,18 +42,7 @@ public class Pov {
 	
 	@OneToMany(mappedBy = "pov")
 	private Collection<Suivi> suivis;
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "employe_id_pov")
-	private Employe employe;
 	
-	
-	
-	public Employe getEmploye() {
-		return employe;
-	}
-	public void setEmploye(Employe employe) {
-		this.employe = employe;
-	}
 	public Appliance getAppliance() {
 		return appliance;
 	}

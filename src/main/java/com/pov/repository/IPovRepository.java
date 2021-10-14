@@ -12,4 +12,5 @@ import com.pov.entities.Pov;
 public interface IPovRepository extends JpaRepository<Pov, Long> {
 
 	public List<Pov> findByAppliance(Appliance appliance); 
+	
 }
